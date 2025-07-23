@@ -1,3 +1,4 @@
+// Code your design here
 module four_bit_binary_adder(
     input [3:0] a,
     input [3:0] b,
@@ -5,7 +6,7 @@ module four_bit_binary_adder(
     output [3:0] sum,
     output cout
     );
-    wire [2:1]c;
+  wire [3:1]c;
     assign sum[0]=a[0]^b[0]^cin;
     assign c[1]=a[0]&b[0]|b[0]&cin|cin&a[0];
     assign sum[1]=a[1]^b[1]^c[1];
