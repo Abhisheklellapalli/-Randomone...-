@@ -24,6 +24,6 @@ module half_adder(
              .d2(d2),
              .d3(d3),
              .d4(d4));
-  assign sum = d2|d3;
+  or o1 (sum,d2,d3);
   assign carry = d4;
 endmodule
