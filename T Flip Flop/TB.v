@@ -19,14 +19,16 @@ module tb;
     $display("Q=%b Q'=%b",q,qbar);
     rst=0;
     t=0;
-    #1;
+    #2;
     $display("Reset=%b Clk=%b t=%b",rst,clk,t);
     $display("Q=%b Q'=%b",q,qbar);
     rst=0;
     t=1;
-    #1;
+    #3;
     $display("Reset=%b Clk=%b t=%b",rst,clk,t);
     $display("Q=%b Q'=%b",q,qbar);
+    $dumpfile("dump.vcd"); 
+    $dumpvars(0,tb);
     #100 $stop;
   end
 endmodule
